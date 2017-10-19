@@ -30,6 +30,10 @@ TODO: Write usage instructions here
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/SimonMiaou/uba.
 
+## Inspirations
+
+- [Simple CQRS example](https://github.com/gregoryyoung/m-r) by [Greg Young](https://twitter.com/gregyoung)
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

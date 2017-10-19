@@ -1,3 +1,4 @@
+require 'active_support/core_ext/string'
 require 'rschema'
 require 'uba/exceptions'
 
@@ -20,6 +21,10 @@ module Uba
 
     def initialize(payload)
       @payload = payload
+    end
+
+    def name
+      self.class.name.underscore
     end
 
     def [](key)

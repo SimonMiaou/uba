@@ -3,6 +3,12 @@ require 'uba/message'
 
 module Uba
   class MessageTest < Minitest::Test
+    def test_name
+      message = Message.new(foo: :bar)
+
+      assert_equal String, message.name.class, 'should return a string'
+    end
+
     def test_payload
       payload = { foo: :bar }
       message = Message.new(payload)
