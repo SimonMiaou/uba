@@ -1,11 +1,11 @@
-Cop/MethodLength:
-  Enabled: false
-
 Metrics/AbcSize:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 100
+  Max: 110
+
+Metrics/MethodLength:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false

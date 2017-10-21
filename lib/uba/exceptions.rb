@@ -1,3 +1,6 @@
 module Uba
-  InvalidSchema = Class.new(StandardError)
+  Exception = Class.new(StandardError)
+
+  InvalidSchema = Class.new(Exception)
+  CouldntInferAggregateId = Class.new(Exception)
 end
