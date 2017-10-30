@@ -1,5 +1,6 @@
+require 'uba/configuration'
 require 'uba/version'
 
 module Uba
-  # Your code goes here...
+  include Configuration
 end

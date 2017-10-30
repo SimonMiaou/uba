@@ -1,6 +1,7 @@
 module Uba
   Exception = Class.new(StandardError)
 
-  InvalidSchema = Class.new(Exception)
+  ConfigurationMustBeDefined = Class.new(Exception)
   CouldntInferAggregateId = Class.new(Exception)
+  InvalidSchema = Class.new(Exception)
 end
