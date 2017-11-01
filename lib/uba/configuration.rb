@@ -1,12 +1,7 @@
 require 'uba/exceptions'
 
 module Uba
-  module Configuration
-    def config
-      yield self if block_given?
-      self
-    end
-
+  class Configuration
     def bus(value = nil)
       @bus = value unless value.nil?
       raise(ConfigurationMustBeDefined, 'bus must be defined') unless defined?(@bus)
