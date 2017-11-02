@@ -1,15 +1,16 @@
 module Uba
   module Publisher
-    def initialize(bus)
-      @bus = bus
-    end
-
     def publish(event_name, payload)
-      # TODO
+      event = Uba.message_name_to_class(event_name).coerce! payload
+
+      Uba.config.event_store.save_event(event)
+      Uba.config.bus.publish(event)
     end
 
     def trigger(command_name, payload)
-      # TODO
+      command = Uba.message_name_to_class(command_name).coerce! payload
+
+      Uba.config.bus.trigger(command)
     end
   end
 end
